@@ -1,15 +1,61 @@
-import streamlit as st
+# ==========================================================
+# Marina Delta
+#
+# FILE : app.py
+#
+# ภาษา : Python
+#
+# หน้าที่
+# -------
+# ไฟล์หลักของเว็บไซต์
+#
+# ไฟล์นี้ทำหน้าที่
+# ----------------
+# - เริ่มต้น Flask
+# - กำหนด Route
+# - เปิดเว็บไซต์
+#
+# หมายเหตุ
+# --------
+# ไฟล์นี้ไม่ควรมี HTML
+# ไม่ควรมี CSS
+#
+# HTML อยู่ใน templates/
+# CSS อยู่ใน static/css/
+# ==========================================================
 
-st.set_page_config(page_title="Marina Delta")
 
-st.title("🌿 Marina Delta")
-st.subheader("Building in Public")
+from flask import Flask, render_template
 
-st.write("Hello, World!")
 
-st.write("Day 1")
-st.write("- Python ✅")
-st.write("- Git ✅")
-st.write("- GitHub ✅")
-st.write("- VS Code ✅")
-st.write("- Streamlit ✅")
+# ==========================================================
+# CREATE APP
+# ==========================================================
+
+app = Flask(__name__)
+
+
+# ==========================================================
+# ROUTES
+# ==========================================================
+
+@app.route("/")
+def home():
+    """
+    หน้าแรกของเว็บไซต์
+    """
+
+    return render_template("index.html")
+
+
+# ==========================================================
+# RUN
+# ==========================================================
+
+if __name__ == "__main__":
+
+    app.run(
+
+        debug=True
+
+    )

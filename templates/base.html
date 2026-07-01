@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<!-- =======================================================
+     Marina Delta
+
+     FILE : templates/base.html
+
+     ภาษา : HTML
+
+     หน้าที่
+     -------
+     โครงสร้างหลักของเว็บไซต์
+
+     ไฟล์นี้ดูแล
+     ------------
+     - Sidebar
+     - Header
+     - Content Layout
+     - โหลด CSS
+     - โหลด Font
+
+     ทุกหน้าจะสืบทอดจากไฟล์นี้
+======================================================== -->
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Marina Delta</title>
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- ==============================================
+         SIDEBAR
+    =============================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h1>MARINA</h1>
+            <h1>DELTA</h1>
+
+        </div>
+
+        <p class="tagline">
+
+            Explore • Observe • Journal • Lab
+
+        </p>
+
+        <div class="description">
+
+            A system for documenting
+            aquatic life,
+            research,
+            development,
+            and curiosity.
+
+        </div>
+
+        <nav class="menu">
+
+            <a href="/">Documentation</a>
+
+            <a href="#">Plants</a>
+
+            <a href="#">Animals</a>
+
+            <a href="#">Articles</a>
+
+            <a href="#">Dev Log</a>
+
+        </nav>
+
+        <div class="profile">
+
+            <strong>Marina</strong>
+
+            <p>
+
+                Building in Public.
+
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ==============================================
+         MAIN
+    =============================================== -->
+
+    <main class="main">
+
+
+        <!-- ==========================================
+             HEADER
+        =========================================== -->
+
+        <header class="header">
+
+            {% block header %}
+
+            {% endblock %}
+
+        </header>
+
+
+
+        <!-- ==========================================
+             CONTENT
+        =========================================== -->
+
+        <section class="content">
+
+            {% block content %}
+
+            {% endblock %}
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>

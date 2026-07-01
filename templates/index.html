@@ -1,0 +1,105 @@
+<!-- =======================================================
+     Marina Delta
+
+     FILE : templates/index.html
+
+     ภาษา : HTML
+
+     หน้าที่
+     -------
+     หน้าแรกของเว็บไซต์
+
+     ไฟล์นี้ดูแล
+     ------------
+     - Header ของหน้า Home
+     - Content ของหน้า Home
+
+     Sidebar และ Layout มาจาก base.html
+======================================================== -->
+
+{% extends "base.html" %}
+
+
+<!-- ======================================================
+     HEADER
+======================================================= -->
+
+{% block header %}
+
+<h2>Documentation & Curiosity</h2>
+
+<p>
+
+    Every experiment,
+    every observation,
+    every improvement
+    will be documented publicly.
+
+</p>
+
+{% endblock %}
+
+
+
+<!-- ======================================================
+     CONTENT
+======================================================= -->
+
+{% block content %}
+
+<section>
+
+    <h3>Welcome</h3>
+
+    <p>
+
+        Marina Delta is a long-term project
+        documenting aquatic plants,
+        animals,
+        technology,
+        programming,
+        experiments,
+        and personal research.
+
+    </p>
+
+</section>
+
+
+<section>
+
+    <h3>Current Status</h3>
+
+    <ul>
+
+        <li>✅ Flask Project Started</li>
+
+        <li>✅ Base Layout Created</li>
+
+        <li>🚧 Design System</li>
+
+        <li>🚧 Plant Database</li>
+
+        <li>🚧 Dev Log</li>
+
+    </ul>
+
+</section>
+
+
+<section>
+
+    <h3>Vision</h3>
+
+    <p>
+
+        Build a clean,
+        searchable,
+        expandable knowledge base
+        from zero.
+
+    </p>
+
+</section>
+
+{% endblock %}
